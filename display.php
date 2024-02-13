@@ -1,6 +1,6 @@
 <html>
  <head>
- <title>display image</title>
+ <title>AGMA 2024</title>
  </head>
  <body>
  		
@@ -8,13 +8,15 @@
         <img src="./upload/pdf.png" class="pdf_icon" onclick="generatePDF();"/>
 		<img src="./upload/excel.png" class="excel_icon" href="./export.php"/>
         <div class="printable_area">
+			<h1 style="padding-top: 10px; text-align: center;">Attendance Sheet</h1>
+			<h3 style="padding-top: 0px; text-align:center; align-items:center;">AGMA 2024</h3>
             <table>
                 
             <div class="col-xl-12 col-lg-7">
                 
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary" style="text-align: center; font-size: 20px;">Data Sheet</h6>
+                        
                     </div>
                     <div class="card-body p-0">
                         <div class="container my-3">
@@ -99,12 +101,12 @@
             th{
                 padding: auto;
                 font-weight: 500;
-                font-size: 12px;
+                font-size: larger;
             }
             td{
                 align-items: center;
                 text-align: center;
-                font-size: 12px;
+                font-size: 16px;
                 width: auto;
                 border: 1px solid #a7a7a7;
             }
