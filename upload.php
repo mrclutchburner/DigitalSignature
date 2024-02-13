@@ -25,7 +25,8 @@ if (isset($_POST['submit'])) {
     $file = $folderPath . $name . "_" . uniqid() . '.' . $image_type;
 
     file_put_contents($file, $image_base64);
-    echo "Signature Uploaded Successfully.";
+    echo "Signature Uploaded Successfully.<script>window.location='index.php';</script>";
+
 
 
     $sql = "INSERT INTO employee_sign(name, address, acctnum, contact, signature_img) VALUES ('$name', '$address', '$acctnum', '$contact', '$file')";
