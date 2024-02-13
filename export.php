@@ -21,7 +21,7 @@ function filterData(&$str){
 } 
  
 // Excel file name for download 
-$fileName = "employee-data_" . date('Y-m-d') . ".xls"; 
+$fileName = "AGMA2024_Attendance_" . date('Y-m-d') . ".xls"; 
  
 // Column names 
 $fields = array('id', 'name', 'address', 'acctnum', 'contact'); 
