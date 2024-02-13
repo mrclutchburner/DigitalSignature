@@ -24,7 +24,7 @@ function filterData(&$str){
 $fileName = "AGMA2024_Attendance_" . date('Y-m-d') . ".xls"; 
  
 // Column names 
-$fields = array('id', 'name', 'address', 'acctnum', 'contact'); 
+$fields = array('MCO Fullname', 'MCO Address', 'Account No.', 'Contact No.', 'Date/Time Register'); 
  
 // Display column names as first row 
 $excelData = implode("\t", array_values($fields)) . "\n"; 
@@ -34,7 +34,7 @@ $query = $db->query("SELECT * FROM employee_sign ORDER BY id ASC");
 if($query->num_rows > 0){ 
     // Output each row of the data 
     while($row = $query->fetch_assoc()){ 
-        $lineData = array($row['id'], $row['name'], $row['address'], $row['acctnum'], $row['contact']); 
+        $lineData = array($row['name'], $row['address'], $row['acctnum'], $row['contact'], $row['time']); 
         array_walk($lineData, 'filterData'); 
         $excelData .= implode("\t", array_values($lineData)) . "\n"; 
     } 
