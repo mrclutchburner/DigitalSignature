@@ -6,7 +6,9 @@
  		
 		
         <img src="./upload/pdf.png" class="pdf_icon" onclick="generatePDF();"/>
-		<img src="./upload/excel.png" class="excel_icon" href="./export.php"/>
+		<a href="export.php" onClick=rec();>
+                <img src="./upload/excel.png" class="excel_icon" style="height: 25px; width: auto; padding-left: 8px;"/>
+        </a>
         <div class="printable_area">
 			<h1 style="padding-top: 10px; text-align: center;">Attendance Sheet</h1>
 			<h3 style="padding-top: 0px; text-align:center; align-items:center;">AGMA 2024</h3>
