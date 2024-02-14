@@ -5,8 +5,9 @@ if (!$con) {
 }
 if (isset($_POST['submit'])) {
     $name = $file = "";
-    if (isset($_POST['name']) && isset($_POST['address'])
+    if (isset($_POST['memnum']) && isset($_POST['name']) && isset($_POST['address'])
     && isset($_POST['acctnum']) && isset($_POST['contact']))  {
+        $memnum = $_POST['memnum'];
         $name = $_POST['name'];
         $address = $_POST['address'];
         $acctnum = $_POST['acctnum'];
@@ -29,6 +30,6 @@ if (isset($_POST['submit'])) {
 
 
 
-    $sql = "INSERT INTO employee_sign(name, address, acctnum, contact, signature_img) VALUES ('$name', '$address', '$acctnum', '$contact', '$file')";
+    $sql = "INSERT INTO employee_sign(memnum,name, address, acctnum, contact, signature_img) VALUES ('$memnum','$name', '$address', '$acctnum', '$contact', '$file')";
     $query = mysqli_query($con, $sql);
 }

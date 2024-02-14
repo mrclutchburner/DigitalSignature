@@ -24,7 +24,7 @@ function filterData(&$str){
 $fileName = "AGMA2024_Attendance_" . date('Y-m-d') . ".xls"; 
  
 // Column names 
-$fields = array('MCO Fullname', 'MCO Address', 'Account No.', 'Contact No.', 'Date/Time Register'); 
+$fields = array('Full Name', 'Address', 'Account No.', 'Contact No.', 'Date|Time'); 
  
 // Display column names as first row 
 $excelData = implode("\t", array_values($fields)) . "\n"; 
