@@ -28,12 +28,12 @@
                     <h1 style="text-align: center;">ILECO II</h1>
                     <h1 style="text-align: center;">2024 AGMA Registration</h1>
                     <div class="col-md-12">
-                        <label for="name" class="form-label">Full Name:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="col-md-12">
                         <label for="memnum" class="form-label">Membership No.</label>
                         <input type="text" class="form-control" id="memnum" name="memnum" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="name" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="col-md-12">
                         <label for="address" class="form-label">Address:</label>
