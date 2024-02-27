@@ -21,11 +21,15 @@ if(isset($_POST['save']))
 }
 
 ?>
-<html>
- <head>
- <title>AGMA 2024</title>
- </head>
- <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./upload/logo.png" />
+    <title>ILECO II|AGMA 2024</title>
+</head>
+<body>
             <form class="form-horizontal" action="#" method="post">
                 <div class="row">
                     <div class="form-group">
@@ -165,4 +169,4 @@ if(isset($_POST['save']))
                                     
                        
  </body>
- </html>
+</html>

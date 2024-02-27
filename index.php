@@ -2,11 +2,12 @@
 <html>
 
 <head>
-    <title>ELECO II AGMA E-Signature Pad</title>
+    <title>ILECO II AGMA Registration|E-Signature</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="./upload/logo.png" />
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdQzg8hAAAAABeZEZOt6CGGv5ZGQjjFJhLntss4"></script>                                                                                                                                                                                                          
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
@@ -29,23 +30,49 @@
                     <h1 style="text-align: center;">2024 AGMA Registration</h1>
                     <div class="col-md-12">
                         <label for="memnum" class="form-label">Membership No.</label>
-                        <input type="text" class="form-control" id="memnum" name="memnum" required>
+                        <input type="text" 
+                            class="form-control" 
+                            id="memnum" 
+                            placeholder="e.g. 0123456789"
+                            name="memnum" required>
                     </div>
                     <div class="col-md-12">
                         <label for="name" class="form-label">Full Name:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
+                        <input type="text" 
+                            class="form-control" 
+                            id="name" 
+                            placeholder="e.g. Dela Cruz, Juan T."
+                            name="name" required>
                     </div>
                     <div class="col-md-12">
                         <label for="address" class="form-label">Address:</label>
-                        <input type="text" class="form-control" id="address" name="address" required>
+                        <input type="text" 
+                            class="form-control" 
+                            id="address"
+                            placeholder="e.g. Brgy. Cau-ayan, Pototan"
+                            name="address" required>
                     </div>
                     <div class="col-md-12">
-                        <label for="acctnum" class="form-label">Account No:</label>
-                        <input type="text" class="form-control" id="acctnum" name="acctnum" required>
+                        <label for="contact" class="form-label">Account No:</label>
+                       
+                        <input type="text"
+                            class="form-control"
+                            id="acct"
+                            name="acctnum"
+                            placeholder="e.g. 00-000-0000"
+                            class="input-field" 
+                            maxlength = "11" required>
+                          
                     </div>
                     <div class="col-md-12">
                         <label for="contact" class="form-label">Contact No:</label>
-                        <input type="text" class="form-control" id="contact" name="contact" required>
+                        <input type="text" 
+                            class="form-control" 
+                            id="contact" 
+                            placeholder="e.g. 09123456789"
+                            maxlength = "11"
+                            name="contact" required>
+                            
                     </div>
                     <div class="col-md-12">
                         <label class="" for="">Signature:</label>
@@ -80,7 +107,29 @@
             $("#signature64").val('');
         });
     </script>
+    <script>
+      
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LdQzg8hAAAAABeZEZOt6CGGv5ZGQjjFJhLntss4', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+              var response = document.getElementById('token_generate');
+              response.value = token;
+          });
+        });
+
+    </script>
+    <script>
+        var account = document.querySelector('#acct');
+
+    account.addEventListener('keyup', function(e){
+    if (event.key != 'Backspace' && (account.value.length === 2 || account.value.length === 6)){
+    account.value += '-';
+    }
+    });
+
+    </script>
 
 </body>
 
 </html>
+
