@@ -2,7 +2,7 @@
 body {
     font-family: "Helvetica", Sans-Serif;
     height: 100%;
-/*    background-image: url("../images/background-image.jpeg");*/
+    background-image: url("./upload/background.png")
   }
 .kbw-signature {
     width: 100%;
