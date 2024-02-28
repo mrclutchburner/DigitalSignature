@@ -20,13 +20,12 @@
 </head>
 
 <body style="background-image: url(./upload/background.png)">
-    
     <div class="container p-4">
 
         <div class="row">
             <div class="col-md-5 border p-3  bg-white">
                 <form method="POST" action="upload.php">
-                    <h1 style="text-align: center; -webkit-text-stroke: .5px black; color: #ffc107; font-family: time new roman;">ILECO II</h1>
+                    <h1 style="text-align: center; -webkit-text-stroke: .8px black; color: #ffc107; font-family: Georgia serif; font-weight:900">ILECO II</h1>
                     <h2 style="text-align: center; -webkit-text-stroke: .5px black; color: #ffc107; font-family: time new roman;">2024 AGMA Registration</h2>
                     <?php if (isset($_GET['error'])) { ?>
                     <p class="error"><?php echo $_GET['error']; ?></p>
@@ -41,7 +40,8 @@
                             class="form-control" 
                             id="memnum" 
                             placeholder="e.g. 0123456789"
-                            name="memnum" required>
+                            name="memnum" required
+                            maxlength = "20" required>
                     </div>
                     <div class="col-md-12">
                         <label for="name" class="form-label">Full Name:</label>
