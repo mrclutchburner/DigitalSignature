@@ -98,15 +98,19 @@ if(isset($_POST['save']))
                                                 }
                                             }
                                             ?>
+            
+                                        </table>  
                                     </div>         
                                 </div>
                                 
                             </div>
-                        </div>
-                    
                     </div>
+                    
                 </div>
+                    
+               
             </table>
+            
             
         </div>  
 			<style>
