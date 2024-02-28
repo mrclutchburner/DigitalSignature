@@ -19,7 +19,7 @@
 
 </head>
 
-<body style="background-image: url(./upload/background.png); width: 100%; height: auto;">
+<body style="background-image: url(./upload/background.png)">
     
     <div class="container p-4">
 
