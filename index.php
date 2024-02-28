@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>ILECO II AGMA Registration|E-Signature</title>
+    <title>ILECO II AGMA Registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,8 +26,15 @@
         <div class="row">
             <div class="col-md-5 border p-3  bg-white">
                 <form method="POST" action="upload.php">
-                    <h1 style="text-align: center;">ILECO II</h1>
-                    <h1 style="text-align: center;">2024 AGMA Registration</h1>
+                    <h1 style="text-align: center; -webkit-text-stroke: .5px black; color: #ffc107; font-family: time new roman;">ILECO II</h1>
+                    <h2 style="text-align: center; -webkit-text-stroke: .5px black; color: #ffc107; font-family: time new roman;">2024 AGMA Registration</h2>
+                    <?php if (isset($_GET['error'])) { ?>
+                    <p class="error"><?php echo $_GET['error']; ?></p>
+                    <?php } ?>
+
+                    <?php if (isset($_GET['success'])) { ?>
+                        <p class="success"><?php echo $_GET['success']; ?></p>
+                    <?php } ?>
                     <div class="col-md-12">
                         <label for="memnum" class="form-label">Membership No.</label>
                         <input type="text" 

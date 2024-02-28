@@ -20,6 +20,7 @@ if(isset($_POST['save']))
    
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +28,7 @@ if(isset($_POST['save']))
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./upload/logo.png" />
-    <title>ILECO II|AGMA 2024</title>
+    <title>ILECO II | AGMA 2024</title>
 </head>
 <body>
             <form class="form-horizontal" action="#" method="post">
